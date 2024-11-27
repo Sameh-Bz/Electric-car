@@ -1,0 +1,39 @@
+.wrapperliste h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #f9f9f9;
+}
+.wrapperliste label{
+  color: #f9f9f9; 
+}
+
+.wrapperliste .table1 {
+  width: 100%;
+  border-radius: 10px;
+  border-collapse:separate;
+  color: rgb(43, 46, 46);
+}
+
+.wrapperliste .table1 th {
+ 
+  border: 1px solid #919090;
+  padding: 4px;
+  text-align:center;
+  background-color: #b1b2f5;
+ 
+}
+
+
+
+
+.wrapperliste .table1 tr {
+  background-color: #e4e2e2;
+
+  
+}
+
+.wrapperliste .bn button{
+  border: 10%;
+  background-color: #aaabf3 ;
+}
+

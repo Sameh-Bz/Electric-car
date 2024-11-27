@@ -1,0 +1,92 @@
+* {
+    margin: 5px;
+    padding: 5px;
+    font-size: auto;
+}
+
+.wrapper {
+    width: 450px;
+    background: transparent;
+    color: beige;
+    height: 90%;
+    border-radius: 10px;
+    padding: 30px 40px;
+    outline: auto;
+    outline-color: gainsboro;
+    margin: -19px;
+}
+
+.wrapper h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 15%;
+}
+
+.wrapper .labels{
+    background: #050505;
+    border-radius: 10px;
+  
+}
+
+.wrapper .input {
+    position: relative;
+    width: 85%;
+    height: 20px;
+    margin: 10px;
+    background: #050505;
+    color: beige;
+    border-radius: 10px;
+    padding: 10px 20px;
+    outline: auto;
+    outline-color: gainsboro;
+    padding: 10px 10px 10px 20px;
+}
+
+.wrapper select {
+    position: relative;
+    width: 93%;
+    height: 40px; /* Adjusted height for better appearance */
+    margin: 10px;
+    background: #050505;
+    color: beige;
+    border: 1px solid gainsboro; /* Border to differentiate the select */
+    border-radius: 10px;
+    padding: 10px 10px 10px 20px ; /* Padding for better spacing */
+    outline-color: gainsboro;
+    font-size: 16px; /* Adjust font size */
+    outline: auto;
+    
+}
+
+.wrapper .icon {
+    position: absolute;
+    right: 44%;
+    top: 3%;
+    transform: translateY(-10%);
+    font-size: 120px;
+}
+
+.wrapper .bn button {
+    width: 46%;
+    background: #ffffff;
+    border: 10%;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(2, 2, 2, 0.1);
+    cursor: pointer;
+    font-size: 20px;
+    color: #333;
+    font-weight: 500;
+    margin-top: 3%;
+}
+
+#App .container {
+    width: 10%;
+    min-width: 40rem;
+    max-width: 75rem;
+    height: 70%;
+    margin: 100%;
+}
+
+
+

@@ -1,0 +1,71 @@
+.info-container {
+    display: flex; /* Using Flexbox for layout */
+    justify-content: center; /* Center the content */
+    padding: 20px; /* Add some padding */
+    max-width: 800px; /* Set max width for the container */
+    margin: -1.5% auto; /* Center the container */
+    background-color: #f9f9f9ec; /* Background color for the container */
+    border: 1px solid #ccc ; /* Border for the container */
+    border-radius: 8px; /* Rounded corners for better aesthetics */
+}
+
+.car-info-wrapper {
+    display: flex; /* Align elements in a row */
+    justify-content: space-between; /* Space between car info and diagram */
+    padding: 20px; /* Padding inside the wrapper */
+}
+
+.car-info-details {
+    flex: 1; /* Take all remaining space */
+    margin-right: 20px; /* Space for the diagram */
+}
+
+.vertical-line {
+    border-left: 2px solid #1a1919; /* Vertical line between details and diagram */
+    margin: 0 20px; /* Margin around the line */
+    height: auto; /* Height adjusts to content */
+}
+
+.car-info-diagram {
+    display: flex; /* Flex container for the diagram */
+    flex-direction: column; /* Align title above diagram */
+    justify-content: center; /* Center the diagram vertically */
+    align-items: center; /* Center the diagram horizontally */
+    width: 20%; /* Width of the diagram section */
+}
+
+h2 {
+    font-size: 24px; /* Font size for the main title */
+    margin-bottom: 10px; /* Space below the title */
+    color: #d10808;
+}
+
+p {
+    font-size: 18px; /* Font size for paragraphs */
+    margin: 5px 0; /* Space above and below paragraphs */
+}
+
+strong {
+    font-weight: bold; /* Bold for emphasis */
+}
+
+.diagram-title {
+    font-size: 18px; /* Font size for diagram title */
+    font-weight: bold; /* Bold for emphasis */
+    margin-bottom: 10px; /* Space below the title */
+}
+
+.battery-percentage {
+    margin-top: 20px; /* Space above battery percentage section */
+    text-align: center; /* Center align the text */
+}
+
+.navigate-button{
+    border: 10%;
+    background-color: #aaabf3 ;
+    margin-bottom: 70%;
+    border-radius: 5px;
+    margin: 5%;
+    font-size: 13px;
+    font-weight: bold
+}
