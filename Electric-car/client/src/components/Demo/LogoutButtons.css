@@ -1,0 +1,22 @@
+.logout-buttons {
+    position: fixed;  /* Positionnement fixe */
+    bottom: 20px;     /* Position du bas */
+    right: 20px;      /* Position à droite */
+    display: flex;    /* Flexbox pour l'alignement */
+    flex-direction: column; /* Alignement vertical */
+    gap: 10px;       /* Espace entre les boutons */
+}
+
+.logout-button {
+    padding: 10px 20px; /* Espacement intérieur */
+    background-color: #ff4d4d; /* Couleur de fond */
+    color: white;       /* Couleur du texte */
+    border: none;       /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer;    /* Curseur pointer */
+    transition: background-color 0.3s; /* Animation de transition */
+}
+
+.logout-button:hover {
+    background-color: #e60000; /* Couleur au survol */
+}

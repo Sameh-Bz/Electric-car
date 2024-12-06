@@ -1,0 +1,172 @@
+# Documentation at http://goreleaser.com
+
+# Project name
+project_name: wasp-cli
+
+# Builds
+builds:
+  # Linux AMD64
+  - id: wasp-cli-linux-amd64
+    binary: wasp-cli
+    ldflags:
+      - -s -w -X=github.com/iotaledger/wasp/components/app.Version={{ .Summary }}
+    main: main.go
+    dir: ./tools/wasp-cli
+    tags:
+      - no_wasmhost
+    goos:
+      - linux
+    goarch:
+      - amd64
+
+  # Linux ARM64
+  - id: wasp-cli-linux-arm64
+    binary: wasp-cli
+    env:
+      - CGO_ENABLED=1
+      - CC=aarch64-linux-gnu-gcc
+      - CXX=aarch64-linux-gnu-g++
+    ldflags:
+      - -s -w -X=github.com/iotaledger/wasp/components/app.Version={{ .Summary }}
+    main: main.go
+    dir: ./tools/wasp-cli
+    tags:
+      - no_wasmhost
+    goos:
+      - linux
+    goarch:
+      - arm64
+  
+  # macOS ARM64
+  - id: wasp-cli-darwin-arm64
+    binary: wasp-cli
+    ldflags:
+      - -s -w -X=github.com/iotaledger/wasp/components/app.Version={{ .Summary }}
+    main: main.go
+    dir: ./tools/wasp-cli
+    tags:
+      - no_wasmhost
+    goos:
+      - darwin
+    goarch:
+      - arm64
+
+    # macOS AMD64
+  - id: wasp-cli-darwin-amd64
+    binary: wasp-cli
+    ldflags:
+      - -s -w -X=github.com/iotaledger/wasp/components/app.Version={{ .Summary }}
+    main: main.go
+    dir: ./tools/wasp-cli
+    tags:
+      - no_wasmhost
+    goos:
+      - darwin
+    goarch:
+      - amd64
+
+  # Windows AMD64
+  - id: wasp-cli-windows-amd64
+    binary: wasp-cli
+    env:
+      - CGO_ENABLED=1
+      - CC=/usr/bin/x86_64-w64-mingw32-gcc-posix
+      - CXX=/usr/bin/x86_64-w64-mingw32-g++-posix
+    ldflags:
+      - -s -w -X=github.com/iotaledger/wasp/components/app.Version={{ .Summary }}
+    main: main.go
+    dir: ./tools/wasp-cli
+    tags:
+      - no_wasmhost
+    goos:
+      - windows
+    goarch:
+      - amd64
+
+# Archives
+
+archives:
+  - # Windows
+    id: wasp-cli-windows
+    builds: 
+      - wasp-cli-windows-amd64
+    format: zip
+    wrap_in_directory: true
+    name_template: >- 
+      {{ .ProjectName }}_{{ .Version }}_Windows_
+      {{- if eq .Arch "amd64" }}x86_64
+      {{- else if eq .Arch "arm64" }}ARM64
+      {{- else if eq .Arch "386" }}i386
+      {{- else }}{{ .Arch }}{{ end }}
+    files:
+      - README.md
+      - LICENSE
+      - src: sdk/iota_sdk.dll
+        dst: iota_sdk.dll
+
+  - # Linux
+    id: wasp-cli-linux
+    builds: 
+      - wasp-cli-linux-amd64
+      - wasp-cli-linux-arm64
+    format: tar.gz
+    wrap_in_directory: true
+    name_template: >- 
+      {{ .ProjectName }}_{{ .Version }}_Linux_
+      {{- if eq .Arch "amd64" }}x86_64
+      {{- else if eq .Arch "arm64" }}ARM64
+      {{- else if eq .Arch "386" }}i386
+      {{- else }}{{ .Arch }}{{ end }}
+    files:
+      - README.md
+      - LICENSE
+      - src: sdk/libiota_sdk.so
+        dst: libiota_sdk.so
+
+  - # MacOS ARM64
+    id: wasp-cli-macos-arm64
+    builds: 
+      - wasp-cli-darwin-arm64
+    format: tar.gz
+    wrap_in_directory: true
+    name_template: >- 
+      {{ .ProjectName }}_{{ .Version }}_MacOS_ARM64
+    files:
+      - README.md
+      - LICENSE
+      - src: sdk/libiota_sdk_arm64.dylib
+        dst: libiota_sdk.dylib
+
+  - # MacOS AMD64
+    id: wasp-cli-macos-amd64
+    builds: 
+      - wasp-cli-darwin-amd64
+    format: tar.gz
+    wrap_in_directory: true
+    name_template: >- 
+      {{ .ProjectName }}_{{ .Version }}_MacOS_x86_64
+    files:
+      - README.md
+      - LICENSE
+      - src: sdk/libiota_sdk_amd64.dylib
+        dst: libiota_sdk.dylib
+
+
+# Checksum
+checksum:
+  name_template: "checksums.txt"
+
+# Snapshot
+snapshot:
+  name_template: "{{ .Tag }}"
+
+# Changelog
+changelog:
+  skip: true
+
+# Release
+release:
+  prerelease: auto
+  github:
+    owner: iotaledger
+    name: wasp

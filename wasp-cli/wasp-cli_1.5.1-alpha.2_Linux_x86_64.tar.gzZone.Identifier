@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://github.com/iotaledger/wasp/releases/tag/v1.5.1-alpha.2
+HostUrl=https://objects.githubusercontent.com/github-production-release-asset-2e65be/262976121/36d46d47-c5d4-4f85-b3c2-8fd114551b47?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20241113%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20241113T152705Z&X-Amz-Expires=300&X-Amz-Signature=84a157beda64af25948cd97aad492f1d8cd36522abf573cfde917de222a30fa3&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Dwasp-cli_1.5.1-alpha.2_Linux_x86_64.tar.gz&response-content-type=application%2Foctet-stream

@@ -1,0 +1,31 @@
+.list-stations-wrapper h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #f9f9f9;
+    margin-top: -1.5pc;
+}
+.list-stations-wrapper .stations-table {
+    width: 100%;
+    border-radius: 10px;
+    border-collapse:separate;
+    color: rgb(43, 46, 46);
+}
+.list-stations-wrapper .stations-table th {
+ 
+    border: 1px solid #919090;
+    padding: 4px;
+    text-align:center;
+    background-color: #b1b2f5;
+   
+}
+.list-stations-wrapper .stations-table tr {
+    background-color: #e4e2e2;
+  
+    
+}
+.list-stations-wrapper .bn button{
+    border: 10%;
+    background-color: #aaabf3 ;
+}
+
+

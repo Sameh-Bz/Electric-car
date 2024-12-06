@@ -1,0 +1,95 @@
+* {
+  margin: 5px;
+  padding: 5px;
+  font-size: auto;
+}
+  
+.station-container .form-section { 
+  width: 39%;
+  background: transparent;
+  color: beige;
+  height: 10%;
+  border-radius: 10px;
+  padding: 30px 30px;
+  outline: auto;
+  outline-color: gainsboro;
+  margin: -30px;
+}
+.station-container .form-section h1 {
+  font-size: 36px;
+  text-align: center;
+  margin-top: 13%;
+    
+}
+
+.station-container .form-section .labels{
+  background: #050505;
+  border-radius: 10px;
+  
+
+}
+.station-container .form-section .input {
+  position: relative;
+  width: 85%;
+  height: 20px;
+  margin: 6px  ;
+  background:#0c0c0c;
+  color: beige;
+  border-radius: 10px;
+  padding: 10px 20px;
+  outline: auto;
+  outline-color: gainsboro;
+  padding: 10px 10px 10px 20px;
+}
+  
+.station-container .form-section .icon {
+  position: absolute;
+  right: 71%;
+  top: 3%;
+  transform: translateY(-10%);
+  font-size: 90px;
+    
+}
+  
+.station-container .form-section .bn1 button {
+  width: 46%;
+  background: #ffffff;
+  border: 10%;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0,0,0, .1);
+  cursor: pointer;
+  font-size: 20px;
+  color: #333;
+  font-weight: 500;
+  margin-top: 1%;
+}
+
+#App .container {
+  width: 10%;
+  min-width: 40rem;
+  max-width: 75rem;
+  height: 70%;
+  margin: 100%;
+}
+
+
+
+
+.station-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.map-section {
+  width: 50%; /* Ajuster la largeur de la carte */
+  margin-left: 60px;
+  margin-top: -2cap;
+}
+
+.station-container::before {
+  content: '';
+  border-left: 2px solid #000; /* Ligne verticale */
+  margin-left: 20px;
+}
