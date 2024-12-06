@@ -19,6 +19,12 @@ $ cd client
 $ npm start
 ```
 
+code python.
+
+```sh
+$ cd voiture
+```
+
 From there, follow the instructions on the hosted React app. It will walk you through using Hardhat to deploy the `ChargeStationFinder` contract, making calls to it, and sending transactions to change the contract's state.
 
 
